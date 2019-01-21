@@ -12,5 +12,12 @@ const accountController= require(path.join(__dirname,"../controllers/accountCont
 //MVC ,获取注册页面请求
 accountRouter.get("/register",accountController.getRegisterPage)
 
+//注册
+accountRouter.post("/register",accountController.register)
+//登录
+accountRouter.get("/login",accountController.getLoginPage)
+//获取验证码
+accountRouter.get('/vcode',accountController.getVcodeImage)
+
 //导出路由对象
 module.exports = accountRouter
